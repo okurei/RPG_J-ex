@@ -9,9 +9,8 @@ public class Character {
         this.name = name;
     }
 
-    public double currentHp(double dmg){
+    public void currentHp(double dmg){
        this.hp = hp - dmg;
-       return hp;
     }
     public double atk (){
         return random.nextInt(100) + 1;

@@ -1,6 +1,9 @@
 import java.util.Random;
 
 public class Combat {
+
+    public int turn = 1;
+
     Character character1 = new Character("Player1");
     Character character2 = new Character("Player2");
     DamageLogic damageLogic = new DamageLogic();
@@ -10,8 +13,8 @@ public class Combat {
 
         int i = 1;
         do {
-            System.out.println("Round" + i + "\n");
-            int turn = random.nextInt(2) + 1;
+            System.out.println("\n Round " + i + "\n");
+            turn = random.nextInt(2) + 1;
             if (turn == 1) {
                 character1.currentHp(damageLogic.endDmg(character1.atk(), character1.crt(), character1.crt()));
                 System.out.println(character1.getName()+ " " + character1.getHp());
@@ -27,6 +30,11 @@ public class Combat {
             }
             i++;
 
-        } while (character1.getHp() > 0 && character2.getHp() > 0);
+        } while (character1.getHp() > 1 && character2.getHp() > 1);
+        if (character1.getHp() > 1){
+            System.out.println("\nPlayer 1 win");
+        }else{
+            System.out.println("\nPlayer 2 win");
+        }
     }
 }

@@ -6,18 +6,16 @@ public class DamageLogic {
         if (hit <26) {
             System.out.println("Miss");
             dmg = 0;
-            return dmg;
         }
         else{
             if (hit > 89){
                 dmg = 10;
-                return dmg;
             }
             else{
                 dmg = hit / 10;
-                return dmg;
             }
         }
+        return dmg;
     }
     private int critical(double crt1, double crt2){
         if (crt1 == crt2){

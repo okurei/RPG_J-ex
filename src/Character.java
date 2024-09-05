@@ -20,7 +20,11 @@ public class Character {
     }
 
     public double getHp() {
-        return hp;
+        if (hp > 0) {
+            return hp;
+        }else{
+            return 0;
+        }
     }
     public String getName(){
         return name;

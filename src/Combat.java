@@ -30,8 +30,8 @@ public class Combat {
             }
             i++;
 
-        } while (character1.getHp() > 1 && character2.getHp() > 1);
-        if (character1.getHp() > 1){
+        } while (character1.getHp() > 0 && character2.getHp() > 0);
+        if (character1.getHp() > 0){
             System.out.println("\nPlayer 1 win");
         }else{
             System.out.println("\nPlayer 2 win");

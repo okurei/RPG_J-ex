@@ -40,5 +40,6 @@ public class DamageLogic {
         dmg = damage(hit)*critical(crt1, crt2);
         return (int) dmg;
     }
+
 }
 

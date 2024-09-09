@@ -3,6 +3,8 @@ import java.util.Random;
 public class Character {
     private final String name;
     private double hp = 100;
+    private final double baseAtk = 10;
+
     Random random = new Random();
 
     public Character(String name) {
